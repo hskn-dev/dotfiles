@@ -1,0 +1,8 @@
+[[plugins]]
+repo = 'juliosueiras/vim-terraform-completion'
+
+[[plugins]]
+repo = 'iamcco/markdown-preview.nvim'
+on_ft = ['markdown', 'pandoc.markdown', 'rmd']
+build = 'sh -c "cd app && yarn install"'
+

@@ -1,0 +1,90 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+merged = '0'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+[[plugins]]
+repo = 'jacoborus/tender.vim'
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'wadackel/vim-dogrun'
+
+[[plugins]]
+repo = 'dracula/vim'
+
+[[plugins]]
+repo = 'KeitaNakamura/neodark.vim'
+
+[[plugins]]
+repo = 'tyrannicaltoucan/vim-deep-space'
+
+[[plugins]]
+repo = 'sonph/onehalf'
+
+[[plugins]]
+repo = 'w0rp/ale'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'yuttie/comfortable-motion.vim'
+ 
+[[plugins]]
+repo = 'preservim/nerdtree'
+
+[[plugins]]
+repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
+ 
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install -all'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+on_ft = ['tf', 'tfvars']
+hook_add = 'let g:terraform_fmt_on_save = 1'
+
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
+hook_add = '''
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+'''
+
+[[plugins]]
+repo = 'ruby-formatter/rufo-vim'
+hook_add = 'let g:rufo_auto_formatting = 1'
+
+[[plugins]]
+repo = 'reireias/vim-cheatsheet'

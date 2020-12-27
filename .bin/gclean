@@ -1,0 +1,28 @@
+#!/usr/local/bin/fish
+echo "[git checkout main]"
+git checkout main
+echo ""
+
+echo "[git fetch]"
+git fetch
+echo ""
+
+echo "[git pull origin main]"
+git pull origin main
+echo ""
+
+echo "[git remote prune origin]"
+git remote prune origin
+echo ""
+
+echo "[git branch --merged | egrep -v 'develop|main|master' | xargs git branch -d]"
+git branch --merged | egrep -v 'develop|main|master' | xargs git branch -d
+echo ""
+
+echo "[git branch]"
+git branch
+echo ""
+
+echo "[git branch -r]"
+git branch -r
+echo ""
