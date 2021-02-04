@@ -29,7 +29,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "c635867f585996fd06228fe144299664fcf7cfca19280ca7ef1eaa93713c94433e98e987f8f769de23a302c295b422e80a7de1c1772472730e085b98d3217b06"
       },
-      "expiry": 1604774689896
+      "expiry": 1611031942243
     },
     "/usr/bin/python2.v3": {
       "data": {
@@ -54,7 +54,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "56275e2671f2fa27d4ef60eae816114f64ba4e36d4529cc0534f954ac02bdec8a19e74250bc86671b1a9f5045cb07beba0e2e1c86ef0dda30debc7187045199c"
       },
-      "expiry": 1604774689898
+      "expiry": 1611031942129
     },
     "/usr/bin/python.v3": {
       "data": {
@@ -79,7 +79,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "08c3a8fadf47ff3f53fd2ee46b2599b0ee1a82c200edbd6e5e6b69e9db7c4a2d15ea0901c85a888e7ea32633053ad955790d9a287466e0401ca58f3e3fb065e9"
       },
-      "expiry": 1604774689897
+      "expiry": 1611031942131
     },
     "/usr/local/bin/python3.8.v3": {
       "data": {
@@ -116,20 +116,20 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.8.5-final",
+          "raw": "3.9.1-final",
           "major": 3,
-          "minor": 8,
-          "patch": 5,
+          "minor": 9,
+          "patch": 1,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.8.5-final"
+          "version": "3.9.1-final"
         },
-        "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
-        "fileHash": "236a719c9c0975b2ca369c563fc1d6a32fbf1fa9c0a3005de4dbc4ab433a734fe776a50f4e903672276e9b3aeea5845cf13db7837b93014f80797bca690f1827"
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.1_6/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "2c94152ffcefa2fa8027a4e9d1fbe111e07c4a8a064514249518fbe69f77e7c5aee40adb2ca29d874ccad1f142d493e55627399ad6991354964ff5967e56ba2a"
       },
-      "expiry": 1604774689894
+      "expiry": 1611031942342
     },
     "/usr/bin/python3.v3": {
       "data": {
@@ -154,7 +154,7 @@
         "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
         "fileHash": "6efd91fc252869b52ae419d902949e58e58d679dc9335077069a989d4f210d950e7f7eb47d642631fc02964d5f96177f3883614aeec30c37c9a98c16a838b87a"
       },
-      "expiry": 1604774690006
+      "expiry": 1611031942390
     },
     "/Users/kengo/.pyenv/versions/3.8.5/bin/python.v3": {
       "data": {
@@ -179,7 +179,7 @@
         "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
         "fileHash": "3dd2dcff01675d2a86664d3852da5010731853808c6232c33d48bdaedb993061516e9669ec12e00c84d0b607ce73d576f1d24756817c10fd0f7ad0758c7563a0"
       },
-      "expiry": 1604774689914
+      "expiry": 1611031942451
     },
     "/Users/kengo/.pyenv/versions/3.8.5/bin/python3.v3": {
       "data": {
@@ -204,7 +204,7 @@
         "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
         "fileHash": "6cb55b22e0e2a03adf2d47aa593a981521334ba985864565b75482f7240deaf134a0154ece68cdcd5c7daa5a04256ecb27acabacd2cef03d39f16b36e6a5e825"
       },
-      "expiry": 1604774689913
+      "expiry": 1611031942450
     },
     "/Users/kengo/.pyenv/versions/3.8.5/bin/python3.8.v3": {
       "data": {
@@ -227,9 +227,9 @@
           "version": "3.8.5-final"
         },
         "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
-        "fileHash": "b0a774d35be2137b52e0d704a663bee6712f5f3087bbe5880f8253494bf00005d32543d355ea728f10e68575bde2d177600cd70a96474bdae6904997fcf37cc6"
+        "fileHash": "d2879d19abe95dc6140a3c34aac186e3d33a393256ee9afd38ed47b8503a712888717169cd54b872e6620337398f65a37759d697c48a06f94595f85fc88d1311"
       },
-      "expiry": 1604774689908
+      "expiry": 1611031942448
     },
     "INTERPRETERS_CACHE_v3_VirtualEnvService": [
       {
@@ -300,7 +300,7 @@
           "version": "3.8.5-final"
         },
         "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
-        "fileHash": "b0a774d35be2137b52e0d704a663bee6712f5f3087bbe5880f8253494bf00005d32543d355ea728f10e68575bde2d177600cd70a96474bdae6904997fcf37cc6",
+        "fileHash": "d2879d19abe95dc6140a3c34aac186e3d33a393256ee9afd38ed47b8503a712888717169cd54b872e6620337398f65a37759d697c48a06f94595f85fc88d1311",
         "envName": "3.8.5",
         "type": "Pyenv"
       }
@@ -326,9 +326,9 @@
           "version": "3.8.5-final"
         },
         "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
-        "fileHash": "d762dc96bc7f69b3f9476a077fdd99d81dc4bd3e3bd1eb961a9de84625e7a3f90995adea55c0d301233d190f4d83d7592913bab8f74f39ec9a79eab5b9ddcde9"
+        "fileHash": "0fb7519b553dc2f0192a6b191ff470290f63b126cd04b30ec014ada5db9018600461075bfce4388163f19ad151a205fdbe863892d7b65d35557faa9129903946"
       },
-      "expiry": 1604774689990
+      "expiry": 1611031942392
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.v3": {
       "data": {
@@ -353,12 +353,12 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "536764f484f122adc2b1ea7a84e9e3241cd5e8a7881764131d3350a1e09207bf8060d22b963766fa597c94ac605cb77d4fe2d553553bf674213dc83705ddd573"
       },
-      "expiry": 1604774690067
+      "expiry": 1611031942429
     },
     "INTERPRETERS_CACHE_v3_CurrentPathService": [
       {
         "architecture": 3,
-        "path": "/Users/kengo/ghq/github.com/hskn-dev/whois_rdap/env/bin/python3",
+        "path": "/Users/kengo/.pyenv/versions/3.8.5/bin/python3",
         "version": {
           "options": {
             "loose": false,
@@ -375,8 +375,8 @@
           "build": [],
           "version": "3.8.5-final"
         },
-        "sysPrefix": "/Users/kengo/ghq/github.com/hskn-dev/whois_rdap/env",
-        "fileHash": "90996426d2e75d706721583ba4b2b2a2a1ce591f1b665e08a3c636810764dfe9938937f686468731b56392c1a76b592d4c802f8bce9f812f8fb366d36d6c391e",
+        "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
+        "fileHash": "6cb55b22e0e2a03adf2d47aa593a981521334ba985864565b75482f7240deaf134a0154ece68cdcd5c7daa5a04256ecb27acabacd2cef03d39f16b36e6a5e825",
         "type": "Unknown"
       },
       {
@@ -404,7 +404,7 @@
       },
       {
         "architecture": 3,
-        "path": "/Users/kengo/ghq/github.com/hskn-dev/whois_rdap/env/bin/python",
+        "path": "/Users/kengo/.pyenv/versions/3.8.5/bin/python",
         "version": {
           "options": {
             "loose": false,
@@ -421,13 +421,13 @@
           "build": [],
           "version": "3.8.5-final"
         },
-        "sysPrefix": "/Users/kengo/ghq/github.com/hskn-dev/whois_rdap/env",
-        "fileHash": "025a644327f2c73dbf5769bb6f57c91d01f7816df31bd1796f756ce7331cce73b57fe367c92a6c5c48a1e726f725be236c429f79506ee19cc7ed04b164e98e4f",
+        "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
+        "fileHash": "3dd2dcff01675d2a86664d3852da5010731853808c6232c33d48bdaedb993061516e9669ec12e00c84d0b607ce73d576f1d24756817c10fd0f7ad0758c7563a0",
         "type": "Unknown"
       },
       {
         "architecture": 3,
-        "path": "/Users/kengo/ghq/github.com/hskn-dev/whois_rdap/env/bin/python3",
+        "path": "/Users/kengo/.pyenv/versions/3.8.5/bin/python",
         "version": {
           "options": {
             "loose": false,
@@ -444,14 +444,14 @@
           "build": [],
           "version": "3.8.5-final"
         },
-        "sysPrefix": "/Users/kengo/ghq/github.com/hskn-dev/whois_rdap/env",
-        "fileHash": "90996426d2e75d706721583ba4b2b2a2a1ce591f1b665e08a3c636810764dfe9938937f686468731b56392c1a76b592d4c802f8bce9f812f8fb366d36d6c391e",
+        "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
+        "fileHash": "3dd2dcff01675d2a86664d3852da5010731853808c6232c33d48bdaedb993061516e9669ec12e00c84d0b607ce73d576f1d24756817c10fd0f7ad0758c7563a0",
         "type": "Unknown"
       }
     ],
     "InterpreterAutoSeletionRule-currentPath": {
       "architecture": 3,
-      "path": "/Users/kengo/ghq/github.com/hskn-dev/whois_rdap/env/bin/python3",
+      "path": "/Users/kengo/.pyenv/versions/3.8.5/bin/python",
       "version": {
         "options": {
           "loose": false,
@@ -468,8 +468,8 @@
         "build": [],
         "version": "3.8.5-final"
       },
-      "sysPrefix": "/Users/kengo/ghq/github.com/hskn-dev/whois_rdap/env",
-      "fileHash": "90996426d2e75d706721583ba4b2b2a2a1ce591f1b665e08a3c636810764dfe9938937f686468731b56392c1a76b592d4c802f8bce9f812f8fb366d36d6c391e",
+      "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
+      "fileHash": "3dd2dcff01675d2a86664d3852da5010731853808c6232c33d48bdaedb993061516e9669ec12e00c84d0b607ce73d576f1d24756817c10fd0f7ad0758c7563a0",
       "type": "Unknown"
     },
     "preferredGlobalPyInterpreter": {
@@ -524,7 +524,7 @@
           "displayName": "Python 3.8.5 64-bit ('3.8.5': pyenv)"
         }
       },
-      "expiry": 1604774880380
+      "expiry": 1611031942542
     },
     "/Users/kengo/.pyenv/shims/python3.8.v3": {
       "data": {
@@ -547,9 +547,9 @@
           "version": "3.8.5-final"
         },
         "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
-        "fileHash": "e74fccc3915f4d163c3674647448765e3fc3a3de188744d332fcfab2e3191d3da0e0efa72d55029414115baaa53cd0e6e767da7e7ab68ec4c610f65790b3739a"
+        "fileHash": "e6df815bcdc966023c6c7cd618b056582464b5bc2b09c94acd312085c23a85326dc825a5683f1cef354d0d7687f6f84d401bb7443a3d2b836fdf6c996f04d7b3"
       },
-      "expiry": 1604774689991
+      "expiry": 1611031942427
     },
     "/Users/kengo/.pyenv/shims/python.v3": {
       "data": {
@@ -572,82 +572,13 @@
           "version": "3.8.5-final"
         },
         "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
-        "fileHash": "764948b928fad295e7fa4e51c528346baef33a5b662e421e8c6622cc05e9586c3aa0283169bed58f1553fcaadc774a858ecc360f58befa03bdbedb78eae3a4f6"
+        "fileHash": "8417dd11fc3aba2ed5d1d40aa026a4f8b1508b997df5e1fb311be3acf56c93c4e54706b88af0e2ab0aace7425008d43d854973484bd3df0eba2c458e02fe40b2"
       },
-      "expiry": 1604774689921
+      "expiry": 1611031942394
     },
     "INTERPRETERS_CACHE_v3_KnownPathsService": [
       {
         "architecture": 3,
-        "path": "/Users/kengo/ghq/github.com/hskn-dev/whois_rdap/env/bin/python",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.5-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 5,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.5-final"
-        },
-        "sysPrefix": "/Users/kengo/ghq/github.com/hskn-dev/whois_rdap/env",
-        "fileHash": "025a644327f2c73dbf5769bb6f57c91d01f7816df31bd1796f756ce7331cce73b57fe367c92a6c5c48a1e726f725be236c429f79506ee19cc7ed04b164e98e4f",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/kengo/ghq/github.com/hskn-dev/whois_rdap/env/bin/python3",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.5-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 5,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.5-final"
-        },
-        "sysPrefix": "/Users/kengo/ghq/github.com/hskn-dev/whois_rdap/env",
-        "fileHash": "90996426d2e75d706721583ba4b2b2a2a1ce591f1b665e08a3c636810764dfe9938937f686468731b56392c1a76b592d4c802f8bce9f812f8fb366d36d6c391e",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/kengo/ghq/github.com/hskn-dev/whois_rdap/env/bin/python3.8",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.5-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 5,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.5-final"
-        },
-        "sysPrefix": "/Users/kengo/ghq/github.com/hskn-dev/whois_rdap/env",
-        "fileHash": "762fb403a4375f5306f2d100de1a8de481e58dcfd43fc960bc0a5af3a6bca0f195e11293f7f616c38686897971136ded55adfbcef2a34b5f1e9c4537a2d1c19f",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
         "path": "/Users/kengo/.pyenv/shims/python",
         "version": {
           "options": {
@@ -666,7 +597,7 @@
           "version": "3.8.5-final"
         },
         "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
-        "fileHash": "764948b928fad295e7fa4e51c528346baef33a5b662e421e8c6622cc05e9586c3aa0283169bed58f1553fcaadc774a858ecc360f58befa03bdbedb78eae3a4f6",
+        "fileHash": "8417dd11fc3aba2ed5d1d40aa026a4f8b1508b997df5e1fb311be3acf56c93c4e54706b88af0e2ab0aace7425008d43d854973484bd3df0eba2c458e02fe40b2",
         "type": "Unknown"
       },
       {
@@ -689,7 +620,7 @@
           "version": "3.8.5-final"
         },
         "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
-        "fileHash": "d762dc96bc7f69b3f9476a077fdd99d81dc4bd3e3bd1eb961a9de84625e7a3f90995adea55c0d301233d190f4d83d7592913bab8f74f39ec9a79eab5b9ddcde9",
+        "fileHash": "0fb7519b553dc2f0192a6b191ff470290f63b126cd04b30ec014ada5db9018600461075bfce4388163f19ad151a205fdbe863892d7b65d35557faa9129903946",
         "type": "Unknown"
       },
       {
@@ -712,76 +643,7 @@
           "version": "3.8.5-final"
         },
         "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
-        "fileHash": "e74fccc3915f4d163c3674647448765e3fc3a3de188744d332fcfab2e3191d3da0e0efa72d55029414115baaa53cd0e6e767da7e7ab68ec4c610f65790b3739a",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/kengo/.pyenv/shims/python",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.5-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 5,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.5-final"
-        },
-        "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
-        "fileHash": "764948b928fad295e7fa4e51c528346baef33a5b662e421e8c6622cc05e9586c3aa0283169bed58f1553fcaadc774a858ecc360f58befa03bdbedb78eae3a4f6",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/kengo/.pyenv/shims/python3",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.5-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 5,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.5-final"
-        },
-        "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
-        "fileHash": "d762dc96bc7f69b3f9476a077fdd99d81dc4bd3e3bd1eb961a9de84625e7a3f90995adea55c0d301233d190f4d83d7592913bab8f74f39ec9a79eab5b9ddcde9",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/kengo/.pyenv/shims/python3.8",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.5-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 5,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.5-final"
-        },
-        "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
-        "fileHash": "e74fccc3915f4d163c3674647448765e3fc3a3de188744d332fcfab2e3191d3da0e0efa72d55029414115baaa53cd0e6e767da7e7ab68ec4c610f65790b3739a",
+        "fileHash": "e6df815bcdc966023c6c7cd618b056582464b5bc2b09c94acd312085c23a85326dc825a5683f1cef354d0d7687f6f84d401bb7443a3d2b836fdf6c996f04d7b3",
         "type": "Unknown"
       },
       {
@@ -793,41 +655,41 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.8.5-final",
+          "raw": "3.9.1-final",
           "major": 3,
-          "minor": 8,
-          "patch": 5,
+          "minor": 9,
+          "patch": 1,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.8.5-final"
+          "version": "3.9.1-final"
         },
-        "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
-        "fileHash": "236a719c9c0975b2ca369c563fc1d6a32fbf1fa9c0a3005de4dbc4ab433a734fe776a50f4e903672276e9b3aeea5845cf13db7837b93014f80797bca690f1827",
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.1_6/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "2c94152ffcefa2fa8027a4e9d1fbe111e07c4a8a064514249518fbe69f77e7c5aee40adb2ca29d874ccad1f142d493e55627399ad6991354964ff5967e56ba2a",
         "type": "Unknown"
       },
       {
         "architecture": 3,
-        "path": "/usr/local/bin/python3.8",
+        "path": "/usr/local/bin/python3.9",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.8.5-final",
+          "raw": "3.9.1-final",
           "major": 3,
-          "minor": 8,
-          "patch": 5,
+          "minor": 9,
+          "patch": 1,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.8.5-final"
+          "version": "3.9.1-final"
         },
-        "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
-        "fileHash": "3dcc4fb4339e7643f9e1305d0486b4b1c225d0c349efa142e5f57b543faded562f852497aad1671af7e1cd85be2a46f7977493c0f4da3db40b57a1a3dcdcb75e",
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.1_6/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "7537f9dadecb7ae5ab4fcce2cd818935fffc894210220ae41fbed0a364eb3008f6f9fd73411af2a1ddf8abba27be544824524ec1deebf5fb5e1f571cd2e47f3e",
         "type": "Unknown"
       },
       {
@@ -931,41 +793,41 @@
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.8.5-final",
+          "raw": "3.9.1-final",
           "major": 3,
-          "minor": 8,
-          "patch": 5,
+          "minor": 9,
+          "patch": 1,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.8.5-final"
+          "version": "3.9.1-final"
         },
-        "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
-        "fileHash": "236a719c9c0975b2ca369c563fc1d6a32fbf1fa9c0a3005de4dbc4ab433a734fe776a50f4e903672276e9b3aeea5845cf13db7837b93014f80797bca690f1827",
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.1_6/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "2c94152ffcefa2fa8027a4e9d1fbe111e07c4a8a064514249518fbe69f77e7c5aee40adb2ca29d874ccad1f142d493e55627399ad6991354964ff5967e56ba2a",
         "type": "Unknown"
       },
       {
         "architecture": 3,
-        "path": "/usr/local/bin/python3.8",
+        "path": "/usr/local/bin/python3.9",
         "version": {
           "options": {
             "loose": false,
             "includePrerelease": false
           },
           "loose": false,
-          "raw": "3.8.5-final",
+          "raw": "3.9.1-final",
           "major": 3,
-          "minor": 8,
-          "patch": 5,
+          "minor": 9,
+          "patch": 1,
           "prerelease": [
             "final"
           ],
           "build": [],
-          "version": "3.8.5-final"
+          "version": "3.9.1-final"
         },
-        "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
-        "fileHash": "3dcc4fb4339e7643f9e1305d0486b4b1c225d0c349efa142e5f57b543faded562f852497aad1671af7e1cd85be2a46f7977493c0f4da3db40b57a1a3dcdcb75e",
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.1_6/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "7537f9dadecb7ae5ab4fcce2cd818935fffc894210220ae41fbed0a364eb3008f6f9fd73411af2a1ddf8abba27be544824524ec1deebf5fb5e1f571cd2e47f3e",
         "type": "Unknown"
       },
       {
@@ -1065,44 +927,44 @@
     "/Users/kengo/.pyenv/versions/3.8.5/bin/python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.8.5 64-bit ('3.8.5': pyenv)",
-        "hash": "3dd2dcff01675d2a86664d3852da5010731853808c6232c33d48bdaedb993061516e9669ec12e00c84d0b607ce73d576f1d24756817c10fd0f7ad0758c7563a0-349277b28eaa63228e8ccab6b4e2b317"
+        "hash": "3dd2dcff01675d2a86664d3852da5010731853808c6232c33d48bdaedb993061516e9669ec12e00c84d0b607ce73d576f1d24756817c10fd0f7ad0758c7563a0-fe005cd93c59b2c00e250041e09b2582"
       },
-      "expiry": 1604774880360
+      "expiry": 1611031942458
     },
     "/Users/kengo/.pyenv/shims/python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.8.5 64-bit",
-        "hash": "764948b928fad295e7fa4e51c528346baef33a5b662e421e8c6622cc05e9586c3aa0283169bed58f1553fcaadc774a858ecc360f58befa03bdbedb78eae3a4f6-330c8458236f0d47cfb68f19bbd2f96a"
+        "hash": "8417dd11fc3aba2ed5d1d40aa026a4f8b1508b997df5e1fb311be3acf56c93c4e54706b88af0e2ab0aace7425008d43d854973484bd3df0eba2c458e02fe40b2-2f108f0200063d3ddffd97e8983a0594"
       },
-      "expiry": 1604774690041
+      "expiry": 1611031942530
     },
     "/usr/bin/python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 2.7.16 64-bit",
         "hash": "08c3a8fadf47ff3f53fd2ee46b2599b0ee1a82c200edbd6e5e6b69e9db7c4a2d15ea0901c85a888e7ea32633053ad955790d9a287466e0401ca58f3e3fb065e9-1ec4114ae4a7992bd4409980f9d9876c"
       },
-      "expiry": 1604774690042
+      "expiry": 1611031942532
     },
     "/usr/local/bin/python3.interpreter.displayName.v7": {
       "data": {
-        "displayName": "Python 3.8.5 64-bit",
-        "hash": "236a719c9c0975b2ca369c563fc1d6a32fbf1fa9c0a3005de4dbc4ab433a734fe776a50f4e903672276e9b3aeea5845cf13db7837b93014f80797bca690f1827-48307d4fe7970d9bf848aa50b4256478"
+        "displayName": "Python 3.9.1 64-bit",
+        "hash": "2c94152ffcefa2fa8027a4e9d1fbe111e07c4a8a064514249518fbe69f77e7c5aee40adb2ca29d874ccad1f142d493e55627399ad6991354964ff5967e56ba2a-11311bcbfac4a4f9eb97525e83729a3c"
       },
-      "expiry": 1604774690043
+      "expiry": 1611031942533
     },
     "/usr/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.8.2 64-bit",
         "hash": "6efd91fc252869b52ae419d902949e58e58d679dc9335077069a989d4f210d950e7f7eb47d642631fc02964d5f96177f3883614aeec30c37c9a98c16a838b87a-810f1c1547b2fe3d7dd5a8140b221d5c"
       },
-      "expiry": 1604774690045
+      "expiry": 1611031942538
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 2.7.16 64-bit",
         "hash": "536764f484f122adc2b1ea7a84e9e3241cd5e8a7881764131d3350a1e09207bf8060d22b963766fa597c94ac605cb77d4fe2d553553bf674213dc83705ddd573-2fac388e3bb7b5c380343321d857668a"
       },
-      "expiry": 1604774690142
+      "expiry": 1611031942535
     },
     "InterpreterAutoSeletionRule-system": {
       "architecture": 3,
@@ -1113,24 +975,24 @@
           "includePrerelease": false
         },
         "loose": false,
-        "raw": "3.8.5-final",
+        "raw": "3.9.1-final",
         "major": 3,
-        "minor": 8,
-        "patch": 5,
+        "minor": 9,
+        "patch": 1,
         "prerelease": [
           "final"
         ],
         "build": [],
-        "version": "3.8.5-final"
+        "version": "3.9.1-final"
       },
-      "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
-      "fileHash": "236a719c9c0975b2ca369c563fc1d6a32fbf1fa9c0a3005de4dbc4ab433a734fe776a50f4e903672276e9b3aeea5845cf13db7837b93014f80797bca690f1827",
+      "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.1_6/Frameworks/Python.framework/Versions/3.9",
+      "fileHash": "2c94152ffcefa2fa8027a4e9d1fbe111e07c4a8a064514249518fbe69f77e7c5aee40adb2ca29d874ccad1f142d493e55627399ad6991354964ff5967e56ba2a",
       "type": "Unknown",
-      "displayName": "Python 3.8.5 64-bit"
+      "displayName": "Python 3.9.1 64-bit"
     },
     "/Users/kengo/.pyenv/shims/python.interpreter.Details.v7": {
       "data": {
-        "fileHash": "764948b928fad295e7fa4e51c528346baef33a5b662e421e8c6622cc05e9586c3aa0283169bed58f1553fcaadc774a858ecc360f58befa03bdbedb78eae3a4f6",
+        "fileHash": "8417dd11fc3aba2ed5d1d40aa026a4f8b1508b997df5e1fb311be3acf56c93c4e54706b88af0e2ab0aace7425008d43d854973484bd3df0eba2c458e02fe40b2",
         "info": {
           "architecture": 3,
           "path": "/Users/kengo/.pyenv/shims/python",
@@ -1151,12 +1013,12 @@
             "version": "3.8.5-final"
           },
           "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
-          "fileHash": "764948b928fad295e7fa4e51c528346baef33a5b662e421e8c6622cc05e9586c3aa0283169bed58f1553fcaadc774a858ecc360f58befa03bdbedb78eae3a4f6",
+          "fileHash": "8417dd11fc3aba2ed5d1d40aa026a4f8b1508b997df5e1fb311be3acf56c93c4e54706b88af0e2ab0aace7425008d43d854973484bd3df0eba2c458e02fe40b2",
           "type": "Unknown",
           "displayName": "Python 3.8.5 64-bit"
         }
       },
-      "expiry": 1604774690059
+      "expiry": 1611031942545
     },
     "/usr/bin/python.interpreter.Details.v7": {
       "data": {
@@ -1186,11 +1048,11 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1604774690061
+      "expiry": 1611031942548
     },
     "/usr/local/bin/python3.interpreter.Details.v7": {
       "data": {
-        "fileHash": "236a719c9c0975b2ca369c563fc1d6a32fbf1fa9c0a3005de4dbc4ab433a734fe776a50f4e903672276e9b3aeea5845cf13db7837b93014f80797bca690f1827",
+        "fileHash": "2c94152ffcefa2fa8027a4e9d1fbe111e07c4a8a064514249518fbe69f77e7c5aee40adb2ca29d874ccad1f142d493e55627399ad6991354964ff5967e56ba2a",
         "info": {
           "architecture": 3,
           "path": "/usr/local/bin/python3",
@@ -1200,23 +1062,23 @@
               "includePrerelease": false
             },
             "loose": false,
-            "raw": "3.8.5-final",
+            "raw": "3.9.1-final",
             "major": 3,
-            "minor": 8,
-            "patch": 5,
+            "minor": 9,
+            "patch": 1,
             "prerelease": [
               "final"
             ],
             "build": [],
-            "version": "3.8.5-final"
+            "version": "3.9.1-final"
           },
-          "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
-          "fileHash": "236a719c9c0975b2ca369c563fc1d6a32fbf1fa9c0a3005de4dbc4ab433a734fe776a50f4e903672276e9b3aeea5845cf13db7837b93014f80797bca690f1827",
+          "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.1_6/Frameworks/Python.framework/Versions/3.9",
+          "fileHash": "2c94152ffcefa2fa8027a4e9d1fbe111e07c4a8a064514249518fbe69f77e7c5aee40adb2ca29d874ccad1f142d493e55627399ad6991354964ff5967e56ba2a",
           "type": "Unknown",
-          "displayName": "Python 3.8.5 64-bit"
+          "displayName": "Python 3.9.1 64-bit"
         }
       },
-      "expiry": 1604774690063
+      "expiry": 1611031942551
     },
     "/usr/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -1246,7 +1108,7 @@
           "displayName": "Python 3.8.2 64-bit"
         }
       },
-      "expiry": 1604774690066
+      "expiry": 1611031942559
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.Details.v7": {
       "data": {
@@ -1276,7 +1138,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1604774690145
+      "expiry": 1611031942556
     },
     "InterpreterAutoSeletionRule-cachedInterpreters": {
       "architecture": 3,
@@ -1300,6 +1162,7 @@
       "sysPrefix": "/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8",
       "fileHash": "236a719c9c0975b2ca369c563fc1d6a32fbf1fa9c0a3005de4dbc4ab433a734fe776a50f4e903672276e9b3aeea5845cf13db7837b93014f80797bca690f1827",
       "type": "Unknown",
+      "cachedEntry": true,
       "displayName": "Python 3.8.5 64-bit"
     },
     "ProposeLSBanner": false,
@@ -1452,7 +1315,32 @@
       },
       "expiry": 1604775431264
     },
-    "pylint_DisableLinterInstallPrompt": true
+    "pylint_DisableLinterInstallPrompt": true,
+    "/usr/local/bin/python3.9.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/local/bin/python3.9",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.9.1-final",
+          "major": 3,
+          "minor": 9,
+          "patch": 1,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.9.1-final"
+        },
+        "sysPrefix": "/usr/local/Cellar/python@3.9/3.9.1_6/Frameworks/Python.framework/Versions/3.9",
+        "fileHash": "7537f9dadecb7ae5ab4fcce2cd818935fffc894210220ae41fbed0a364eb3008f6f9fd73411af2a1ddf8abba27be544824524ec1deebf5fb5e1f571cd2e47f3e"
+      },
+      "expiry": 1611031942396
+    }
   },
   "coc-python|/Users/kengo/ghq/github.com/hskn-dev/whois_rdap": {
     "INTERPRETERS_CACHE_v3_PipEnvService:a973912e2b9e9f60f07b80b3748e022d": [],
@@ -1629,5 +1517,34 @@
       }
     ],
     "SelectedPythonPath": "/Users/kengo/ghq/github.com/hskn-dev/whois_rdap/env/bin/python3"
+  },
+  "coc-python|/Users/kengo/ghq/github.com/dogbert/bios-pwgen": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:31909eb8758c7c45132a2e7cc9c9eb63": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:31909eb8758c7c45132a2e7cc9c9eb63": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/kengo/ghq/github.com/dogbert/bios-pwgen": {
+      "architecture": 3,
+      "path": "/Users/kengo/.pyenv/versions/3.8.5/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.5-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 5,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.5-final"
+      },
+      "sysPrefix": "/Users/kengo/.pyenv/versions/3.8.5",
+      "fileHash": "3dd2dcff01675d2a86664d3852da5010731853808c6232c33d48bdaedb993061516e9669ec12e00c84d0b607ce73d576f1d24756817c10fd0f7ad0758c7563a0",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
   }
 }
