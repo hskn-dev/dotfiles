@@ -1,6 +1,9 @@
 #---------------------------------------------------------------------------
 # General
 #---------------------------------------------------------------------------
+# viモードでの操作の有効化
+# bindkey -v
+
 # iTerm
 export CLICOLOR=1
 export TERM=xterm-256color
@@ -26,11 +29,12 @@ alias ll='ls -ltr'
 # Complement
 #---------------------------------------------------------------------------
 # 補完機能を有効にする
-autoload -U compinit; compinit
+autoload compinit
+compinit
 
 # 予測機能
-autoload predict-on
-predict-on
+# autoload predict-on
+# predict-on
 
 # cdのタイミングで自動的にpushd
 setopt auto_pushd
@@ -42,8 +46,8 @@ setopt auto_list
 setopt list_types
 
 # 自動修正
-setopt correct
-setopt correct_all
+# setopt correct
+# setopt correct_all
 
 # 補完キー（Tab, Ctrl+I) による補完候補の選択
 setopt auto_menu
@@ -73,8 +77,9 @@ setopt nolistbeep
 # Prompt
 #---------------------------------------------------------------------------
 # プロンプトを変更
-autoload -U promptinit; promptinit
-prompt pure
+# autoload promptinit
+# promptinit
+# prompt pure
 
 #---------------------------------------------------------------------------
 # History
@@ -117,24 +122,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # bindkey "^N" history-beginning-search-forward-end
 
 #---------------------------------------------------------------------------
-# ZPLUG
-#---------------------------------------------------------------------------
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
-zplug "rupa/z", use:z.sh
-
-# 未インストール項目をインストールする
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-# コマンドをリンクして、PATH に追加し、プラグインは読み込む
-zplug load –verbose
-
-#---------------------------------------------------------------------------
 # FZF
 #---------------------------------------------------------------------------
 export FZF_LEGACY_KEYBINDINGS=0
@@ -143,40 +130,43 @@ export FZF_DEFAULT_OPTS='--preview "bat  --color=always --style=header,grid --li
 export FZF_FIND_FILE_COMMAND=$FZF_DEFAULT_COMMAND
 
 # 現在のディレクトリ配下の検索
-fzf-current-search() {
-    local res=$(find . | fzf)
-    if [ -n "$res" ]; then
-        BUFFER="cd $(dirname $res)"
-        zle accept-line
-    else
-        return 1
-    fi
+function fzf-current-search() {
+  local res=$(find . | fzf)
+  if [ -n "$res" ]; then
+      BUFFER="$(dirname $res)"
+      CURSOR=${#BUFFER}
+  else
+      return 1
+  fi
+  zle reset-prompt
 }
 zle -N fzf-current-search
 bindkey '^f' fzf-current-search
 
 # history の検索
-fzf-history-search() {
-    local res=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
-    if [ -n "$res" ]; then
-        BUFFER="$res"
-        zle accept-line
-    else
-        return 1
-    fi
+function fzf-history-search() {
+  local res=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
+  if [ -n "$res" ]; then
+      BUFFER="$res"
+      CURSOR=${#BUFFER}
+  else
+      return 1
+  fi
+  zle reset-prompt
 }
 zle -N fzf-history-search
 bindkey '^r' fzf-history-search
 
 # z コマンド結果の検索
-fzf-z-search() {
-    local res=$(z | sort -rn | cut -c 12- | fzf)
-    if [ -n "$res" ]; then
-        BUFFER="cd $res"
-        zle accept-line
-    else
-        return 1
-    fi
+function fzf-z-search() {
+  local res=$(z | sort -rn | cut -c 12- | fzf)
+  if [ -n "$res" ]; then
+      BUFFER="$res"
+      CURSOR=${#BUFFER}
+  else
+      return 1
+  fi
+  zle reset-prompt
 }
 zle -N fzf-z-search
 bindkey '^z' fzf-z-search
@@ -187,10 +177,83 @@ function fzf-ghq-search() {
             "bat --color=always --style=header,grid --line-range :80 \
             $(ghq root)/{}/README.*" --reverse --height=50%)
   if [ -n "$res" ]; then
-    BUFFER="cd $(ghq root)/$res"
-    zle accept-line
+    BUFFER="$(ghq root)/$res"
+    CURSOR=${#BUFFER}
   fi
-  zle -R -c
+  zle reset-prompt
 }
 zle -N fzf-ghq-search
 bindkey '^g' fzf-ghq-search
+
+#---------------------------------------------------------------------------
+# ZINIT
+#---------------------------------------------------------------------------
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+fi
+
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-rust \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-bin-gem-node
+
+### End of Zinit's installer chunk
+
+# oh-my-zshのセットアップ
+zinit snippet OMZL::git.zsh
+zinit snippet OMZP::git # <- なんかおまじないらしい
+zinit cdclear -q
+
+# プロンプトのカスタマイズ
+setopt promptsubst
+zinit snippet OMZT::gnzh
+zinit light agnoster/agnoster-zsh-theme # <- ここで好きなテーマのGitHubリポジトリを Group/Repository で指定。
+export AGNOSTER_PROMPT_SEGMENTS[2]=
+
+# 補完
+zinit light zsh-users/zsh-autosuggestions
+
+# シンタックスハイライト
+zinit light zdharma/fast-syntax-highlighting
+
+# クローンしたGit作業ディレクトリで、コマンド `git open` を実行するとブラウザでGitHubが開く
+zinit light paulirish/git-open
+
+# iTerm2を使っている場合に、コマンド `tt タブ名` でタブ名を変更できる
+zinit light gimbo/iterm2-tabs.zsh
+
+# jq をインタラクティブに使える。JSONを標準出力に出すコマンドを入力した状態で `Alt+j` すると jq のクエリが書ける。
+# 要 jq
+zinit light reegnz/jq-zsh-plugin
+
+# Gitの変更状態がわかる ls。ls の代わりにコマンド `k` を実行するだけ。
+zinit light supercrabtree/k
+
+# z コマンドの利用
+zinit light rupa/z
+
+# ディレクト移動のクイック操作
+zinit light Tarrasch/zsh-bd
+
+# Visual モード
+# zinit light b4b4r07/zsh-vimode-visual
+
+# AWS CLI v2の補完。
+# 要 AWS CLI v2
+# この順序で記述しないと `complete:13: command not found: compdef` のようなエラーになるので注意
+autoload bashcompinit && bashcompinit
+source ~/.zinit/plugins/drgr33n---oh-my-zsh_aws2-plugin/aws2_zsh_completer.sh
+complete -C '/usr/local/bin/aws_completer' aws
+zinit light drgr33n/oh-my-zsh_aws2-plugin
