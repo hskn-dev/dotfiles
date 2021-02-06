@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #---------------------------------------------------------------------------
 # General
 #---------------------------------------------------------------------------
@@ -29,8 +36,7 @@ alias ll='ls -ltr'
 # Complement
 #---------------------------------------------------------------------------
 # 補完機能を有効にする
-autoload compinit
-compinit
+autoload -Uz compinit; compinit
 
 # 予測機能
 # autoload predict-on
@@ -108,12 +114,27 @@ setopt inc_append_history
 # スペースで始まるコマンド行はヒストリリストから削除
 setopt hist_ignore_space
 
+# --prefix=/usr などの = 以降でも補完
+setopt magic_equal_subst
+
 # ヒストリを呼び出してから実行する間に一旦編集可能
 setopt hist_verify
 autoload history-search-end
 
+# 補完時の色設定
+export LSCOLORS='Gxfxcxdxbxegedabagacad'
+
 # 補完の時に大文字小文字を区別しない
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# 補完の選択を楽にする
+zstyle ':completion:*' menu select
+
+# 補完候補に色つける
+zstyle ':completion:*' list-colors "${LS_COLORS}"
+
+# manの補完をセクション番号別に表示させる
+zstyle ':completion:*:manuals' separate-sections true
 
 # 履歴検索機能のショートカット
 # zle -N history-beginning-search-backward-end history-search-end
@@ -217,10 +238,10 @@ zinit snippet OMZP::git # <- なんかおまじないらしい
 zinit cdclear -q
 
 # プロンプトのカスタマイズ
-setopt promptsubst
-zinit snippet OMZT::gnzh
-zinit light agnoster/agnoster-zsh-theme # <- ここで好きなテーマのGitHubリポジトリを Group/Repository で指定。
-export AGNOSTER_PROMPT_SEGMENTS[2]=
+# setopt promptsubst
+# zinit snippet OMZT::gnzh
+# zinit light agnoster/agnoster-zsh-theme # <- ここで好きなテーマのGitHubリポジトリを Group/Repository で指定。
+# export AGNOSTER_PROMPT_SEGMENTS[2]=
 
 # 補完
 zinit light zsh-users/zsh-autosuggestions
@@ -244,8 +265,22 @@ zinit light supercrabtree/k
 # z コマンドの利用
 zinit light rupa/z
 
-# ディレクト移動のクイック操作
+# 親ディレクト移動のクイック操作
 zinit light Tarrasch/zsh-bd
+
+# ディレクトリ移動の補完
+zinit light b4b4r07/enhancd
+
+# プロンプトの変更
+# options: https://bit.ly/36P4HpL
+# xterm-256color: https://bit.ly/36M8W5q
+# zinit light denysdovhan/spaceship-prompt
+# export SPACESHIP_GIT_BRANCH_COLOR='222'
+# export SPACESHIP_GIT_STATUS_COLOR='108'
+# export SPACESHIP_PYENV_COLOR='172'
+# export SPACESHIP_DOCKER_COLOR='111'
+
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Visual モード
 # zinit light b4b4r07/zsh-vimode-visual
@@ -257,3 +292,6 @@ autoload bashcompinit && bashcompinit
 source ~/.zinit/plugins/drgr33n---oh-my-zsh_aws2-plugin/aws2_zsh_completer.sh
 complete -C '/usr/local/bin/aws_completer' aws
 zinit light drgr33n/oh-my-zsh_aws2-plugin
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
