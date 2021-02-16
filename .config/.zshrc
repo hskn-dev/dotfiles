@@ -300,5 +300,10 @@ source ~/.zinit/plugins/drgr33n---oh-my-zsh_aws2-plugin/aws2_zsh_completer.sh
 complete -C '/usr/local/bin/aws_completer' aws
 zinit light drgr33n/oh-my-zsh_aws2-plugin
 
+# AWS SAM
+export PATH="/usr/local/opt/python/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/python/lib"
+export PKG_CONFIG_PATH="/usr/local/opt/python/lib/pkgconfig"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
