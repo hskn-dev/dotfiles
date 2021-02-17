@@ -23,3 +23,6 @@ tmux-powerline
 # irb/
 
 .vscode
+.python-version
+package.json
+yarn.lock
