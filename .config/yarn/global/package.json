@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "create-nuxt-app": "^3.4.0",
-    "ejs": "^3.0.1",
-    "nuxt": "^2.14.9"
-  }
-}
