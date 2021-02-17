@@ -24,5 +24,6 @@ tmux-powerline
 
 .vscode
 .python-version
-package.json
-yarn.lock
+.config/coc/extensions/package.json
+.config/yarn/global/package.json
+.config/yarn/global/yarn.lock
