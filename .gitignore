@@ -19,11 +19,11 @@
 node_modules
 github.com
 tmux-powerline
+coc
+configstore
+yarn
 
 # irb/
 
 .vscode
 .python-version
-.config/coc/extensions/package.json
-.config/yarn/global/package.json
-.config/yarn/global/yarn.lock
