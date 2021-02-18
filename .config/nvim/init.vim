@@ -5,7 +5,6 @@ let mapleader = ','
 map <C-l> :bn<CR>
 map <C-h> :bp<CR>
 
-
 "  Path configs
 " ---------------------------
 let s:config_dir=empty($XDG_CONFIG_HOME) ? expand("$HOME/.config") : expand($XDG_CONFIG_HOME)
@@ -333,3 +332,11 @@ nmap <Leader>c :Cheat<CR>
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+""" tmux vim active color setting
+augroup ChangeBackground
+  autocmd!
+  autocmd WinEnter * highlight Normal guibg=default
+  autocmd WinEnter * highlight NormalNC guibg='#444444'
+  autocmd FocusGained * highlight Normal guibg=default 
+  autocmd FocusLost * highlight Normal guibg='#444444'
+augroup END
