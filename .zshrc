@@ -250,12 +250,6 @@ zinit snippet OMZL::git.zsh
 zinit snippet OMZP::git # <- なんかおまじないらしい
 zinit cdclear -q
 
-# プロンプトのカスタマイズ
-# setopt promptsubst
-# zinit snippet OMZT::gnzh
-# zinit light agnoster/agnoster-zsh-theme # <- ここで好きなテーマのGitHubリポジトリを Group/Repository で指定。
-# export AGNOSTER_PROMPT_SEGMENTS[2]=
-
 # 補完
 zinit light zsh-users/zsh-autosuggestions
 
@@ -285,26 +279,15 @@ zinit light Tarrasch/zsh-bd
 zinit light b4b4r07/enhancd
 
 # プロンプトの変更
-# options: https://bit.ly/36P4HpL
-# xterm-256color: https://bit.ly/36M8W5q
-# zinit light denysdovhan/spaceship-prompt
-# export SPACESHIP_GIT_BRANCH_COLOR='222'
-# export SPACESHIP_GIT_STATUS_COLOR='108'
-# export SPACESHIP_PYENV_COLOR='172'
-# export SPACESHIP_DOCKER_COLOR='111'
-
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Visual モード
 # zinit light b4b4r07/zsh-vimode-visual
 
 # AWS CLI v2の補完。
-# 要 AWS CLI v2
-# この順序で記述しないと `complete:13: command not found: compdef` のようなエラーになるので注意
 autoload bashcompinit && bashcompinit
-source ~/.zinit/plugins/drgr33n---oh-my-zsh_aws2-plugin/aws2_zsh_completer.sh
+export PATH="/usr/local/bin/aws_completer:$PATH"
 complete -C '/usr/local/bin/aws_completer' aws
-zinit light drgr33n/oh-my-zsh_aws2-plugin
 
 # AWS SAM
 export PATH="/usr/local/opt/python/bin:$PATH"
