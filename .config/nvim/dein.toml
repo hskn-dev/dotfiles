@@ -88,3 +88,6 @@ hook_add = 'let g:rufo_auto_formatting = 1'
 
 [[plugins]]
 repo = 'reireias/vim-cheatsheet'
+
+[[plugins]]
+repo = 'alvan/vim-closetag'
