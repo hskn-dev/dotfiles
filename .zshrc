@@ -42,8 +42,8 @@ eval "$(rbenv init -)"
 #---------------------------------------------------------------------------
 alias 'vim'='nvim'
 alias 'tf'='terraform'
-alias ls="ls -G"
-alias ll='ls -ltr'
+alias 'ls'="ls -G"
+alias 'll'='ls -ltr'
 
 #---------------------------------------------------------------------------
 # Complement
