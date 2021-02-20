@@ -1,5 +1,6 @@
 " Config
-let mapleader = ','
+let mapleader = ' '
+nmap <Esc><Esc> :nohl<CR>
 
 " Buffer
 map <C-l> :bn<CR>
@@ -325,6 +326,11 @@ nnoremap [Fzf]b :<C-u>Buffers<CR>
 """ markdown-preview-nvim
 nmap <leader>p :MarkdownPreview<CR>
 let g:mkdp_markdown_css = expand('~/.config/.markdown.css')
+
+""" easymotion
+nmap  <Leader>s <Plug>(easymotion-s)
+nmap  <Leader>w <Plug>(easymotion-w)
+nmap  <Leader>b <Plug>(easymotion-b)
 
 """ cheatsheet
 let g:cheatsheet#cheat_file = expand('~/.cheatsheet.md')

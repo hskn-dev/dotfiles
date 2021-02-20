@@ -91,3 +91,6 @@ repo = 'reireias/vim-cheatsheet'
 
 [[plugins]]
 repo = 'alvan/vim-closetag'
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
