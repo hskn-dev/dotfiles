@@ -11,6 +11,9 @@ fi
 # viモードでの操作の有効化
 # bindkey -v
 
+# Secret
+[[ ! -f ~/.secret/env.sh ]] || source ~/.secret/env.sh
+
 # iTerm
 export CLICOLOR=1
 export TERM=xterm-256color
@@ -44,6 +47,7 @@ alias 'vim'='nvim'
 alias 'tf'='terraform'
 alias 'ls'="ls -G"
 alias 'll'='ls -ltr'
+alias 'mk'='make'
 
 #---------------------------------------------------------------------------
 # Complement
