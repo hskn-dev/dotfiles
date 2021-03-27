@@ -27,6 +27,21 @@ setopt no_beep
 # 色を使用出来るようにする
 autoload -U colors; colors
 
+#--------------------------------------------------------------------------
+# Alias
+#---------------------------------------------------------------------------
+alias 'vim'='nvim'
+alias 'tf'='terraform'
+alias 'ls'="ls -G"
+alias 'll'='ls -ltr'
+alias 'cls'='clear'
+alias 'tmuxg'='tmux new-session -d; \
+        tmux setw synchronize-panes off; \
+        tmux splitw -v; tmux splitw -h -t 0; \
+        tmux splitw -h -t 2; \
+        tmux select-pane -t 0; \
+        tmux attach-session'
+
 #---------------------------------------------------------------------------
 # pyenv
 #---------------------------------------------------------------------------
@@ -46,13 +61,11 @@ eval "$(rbenv init -)"
 export PATH=$HOME/.jenv/bin:$PATH
 eval "$(jenv init -)"
 
-#--------------------------------------------------------------------------
-# Alias
 #---------------------------------------------------------------------------
-alias 'vim'='nvim'
-alias 'tf'='terraform'
-alias 'ls'="ls -G"
-alias 'll'='ls -ltr'
+# go
+#---------------------------------------------------------------------------
+export PATH=$HOME/go/bin:$PATH
+eval "$(jenv init -)"
 
 #---------------------------------------------------------------------------
 # Complement
@@ -169,12 +182,17 @@ zstyle ':completion:*:manuals' separate-sections true
 #---------------------------------------------------------------------------
 export FZF_LEGACY_KEYBINDINGS=0
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git/*"'
-export FZF_DEFAULT_OPTS='--preview "bat  --color=always --style=header,grid --line-range :100 {}" --reverse --height=50%'
+#export FZF_DEFAULT_OPTS='--preview "bat  --color=always --style=header,grid --line-range :100 {}" --reverse --height=50%'
 export FZF_FIND_FILE_COMMAND=$FZF_DEFAULT_COMMAND
 
 # 現在のディレクトリ配下の検索
 function fzf-current-search() {
-  local res=$(find . | fzf)
+  local res=$(find . | \
+            fzf \
+              --prompt="CURRENT > " \
+              --preview "bat --color=always --style=header,grid --line-range :80" \
+              --reverse \
+              --height=50%)
   if [ -n "$res" ]; then
       BUFFER="$(dirname $res)"
       CURSOR=${#BUFFER}
@@ -188,7 +206,13 @@ bindkey '^f' fzf-current-search
 
 # history の検索
 function fzf-history-search() {
-  local res=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
+  local res=$(history -n -r 1 | \
+            fzf \
+              --prompt="HISTORY > " \
+              --reverse \
+              --height=50% \
+              --no-sort +m \
+              --query "$LBUFFER")
   if [ -n "$res" ]; then
       BUFFER="$res"
       CURSOR=${#BUFFER}
@@ -200,9 +224,13 @@ function fzf-history-search() {
 zle -N fzf-history-search
 bindkey '^r' fzf-history-search
 
-# z コマンド結果の検索
+# z コマンド(アクセス頻度による cd 履歴)結果の検索
 function fzf-z-search() {
-  local res=$(z | sort -rn | cut -c 12- | fzf)
+  local res=$(z | sort -rn | cut -c 12- | \
+            fzf \
+              --prompt="Z > " \
+              --reverse \
+              --height=50%)
   if [ -n "$res" ]; then
       BUFFER="$res"
       CURSOR=${#BUFFER}
@@ -216,9 +244,12 @@ bindkey '^z' fzf-z-search
 
 # ghq の検索
 function fzf-ghq-search() {
-  local res=$(ghq list | fzf --preview \
-            "bat --color=always --style=header,grid --line-range :80 \
-            $(ghq root)/{}/README.*" --reverse --height=50%)
+  local res=$(ghq list | \
+            fzf \
+              --prompt="GHQ > " \
+              --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*" \
+              --reverse \
+              --height=50%)
   if [ -n "$res" ]; then
     BUFFER="$(ghq root)/$res"
     CURSOR=${#BUFFER}
@@ -227,6 +258,22 @@ function fzf-ghq-search() {
 }
 zle -N fzf-ghq-search
 bindkey '^g' fzf-ghq-search
+
+# make の検索
+function fzf-make-search() {
+  local res=$(egrep ':$' ~/Makefile | sed 's/:$//' | \
+            fzf \
+              --prompt="MAKE > " \
+              --reverse \
+              --height=50%)
+  if [ -n "$res" ]; then
+    BUFFER="make $res"
+    CURSOR=${#BUFFER}
+  fi
+  zle reset-prompt
+}
+zle -N fzf-make-search
+bindkey '^h' fzf-make-search
 
 #---------------------------------------------------------------------------
 # ZINIT

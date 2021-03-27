@@ -25,5 +25,7 @@ yarn
 
 # irb/
 
+.config/tmux/tmux-powerline
+.config/filezilla
 .vscode
 .python-version
