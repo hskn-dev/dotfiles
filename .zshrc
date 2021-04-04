@@ -8,8 +8,11 @@ fi
 #---------------------------------------------------------------------------
 # General
 #---------------------------------------------------------------------------
-# viモードでの操作の有効化
+# viins キーマップを選択
 # bindkey -v
+
+# emacs キーマップを選択
+bindkey -e
 
 # Secret
 [[ ! -f ~/.secret/env.sh ]] || source ~/.secret/env.sh
@@ -60,6 +63,12 @@ eval "$(rbenv init -)"
 #---------------------------------------------------------------------------
 export PATH=$HOME/.jenv/bin:$PATH
 eval "$(jenv init -)"
+
+#---------------------------------------------------------------------------
+# rbenv
+#---------------------------------------------------------------------------
+export EDITOR=vim
+eval "$(direnv hook zsh)"
 
 #---------------------------------------------------------------------------
 # go
@@ -184,6 +193,7 @@ export FZF_LEGACY_KEYBINDINGS=0
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git/*"'
 #export FZF_DEFAULT_OPTS='--preview "bat  --color=always --style=header,grid --line-range :100 {}" --reverse --height=50%'
 export FZF_FIND_FILE_COMMAND=$FZF_DEFAULT_COMMAND
+INPUTS=~/inputs
 
 # 現在のディレクトリ配下の検索
 function fzf-current-search() {
@@ -273,7 +283,34 @@ function fzf-make-search() {
   zle reset-prompt
 }
 zle -N fzf-make-search
-bindkey '^h' fzf-make-search
+bindkey '^t' fzf-make-search
+
+# macros の検索
+function fzf-macros-search() {
+  local link=$(readlink ~/macros)
+  local res=$(find ${link} -type f | grep -v -e 'README' -e 'LICENSE' -e '\.git' | xargs basename | \
+            fzf \
+              --prompt="MACROS > " \
+              --reverse \
+              --height=50%)
+  if [ -n "${res}" ]; then
+    local subdir=$(echo ${res} | cut -f 1 -d '_')
+    BUFFER="~/macros/${subdir}/${res}"
+    case ${subdir} in
+      "ssh") 
+        if [ "${res}" != "ssh_create" ] ; then
+          BUFFER="~/macros/${subdir}/target/${res}"
+        fi ;;
+      *) ;;
+    esac
+    CURSOR=${#BUFFER}
+  else
+      return 1
+  fi
+  zle reset-prompt
+}
+zle -N fzf-macros-search
+bindkey '^h' fzf-macros-search
 
 #---------------------------------------------------------------------------
 # ZINIT
