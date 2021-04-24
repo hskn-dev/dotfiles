@@ -27,5 +27,7 @@ yarn
 
 .config/tmux/tmux-powerline
 .config/filezilla
+.config/yarn
+.config/iterm2
 .vscode
 .python-version
