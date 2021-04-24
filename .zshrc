@@ -44,6 +44,7 @@ alias 'tmuxg'='tmux new-session -d; \
         tmux splitw -h -t 2; \
         tmux select-pane -t 0; \
         tmux attach-session'
+#alias 'tmuxg'="tmux new-session -d; tmux pipe-pane -o '/bin/sh -c \"while read -r LINE; do echo \"[\$(date +\"%%Y_%%m%%d_%%H%%M%%S_%%N\")] \${LINE}\" >> \${HOME}/tmux-logs/\$(date +%Y%m%d-%H%M%S)-#S-#I.#P.log; done \"'"
 
 #---------------------------------------------------------------------------
 # pyenv
@@ -288,7 +289,7 @@ bindkey '^t' fzf-make-search
 # macros の検索
 function fzf-macros-search() {
   local link=$(readlink ~/macros)
-  local res=$(find ${link} -type f | grep -v -e 'README' -e 'LICENSE' -e '\.git' | xargs basename | \
+  local res=$(find "${HOME}/${link}" -type f | grep -v -e 'README' -e 'LICENSE' -e '\.git' | xargs basename | \
             fzf \
               --prompt="MACROS > " \
               --reverse \
