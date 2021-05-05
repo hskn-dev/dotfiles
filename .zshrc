@@ -299,7 +299,7 @@ function fzf-macros-search() {
     BUFFER="~/macros/${subdir}/${res}"
     case ${subdir} in
       "ssh") 
-        if [ "${res}" != "ssh_create" ] ; then
+        if [ "${res}" != "ssh_update" ] ; then
           BUFFER="~/macros/${subdir}/target/${res}"
         fi ;;
       *) ;;
@@ -371,6 +371,9 @@ zinit light Tarrasch/zsh-bd
 
 # ディレクトリ移動の補完
 zinit light b4b4r07/enhancd
+
+# コメントアウトのトグル
+zinit light tpope/vim-commentary
 
 # プロンプトの変更
 zinit ice depth=1; zinit light romkatv/powerlevel10k
