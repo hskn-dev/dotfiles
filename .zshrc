@@ -51,7 +51,7 @@ alias 'tmuxg'='tmux new-session -d; \
 #---------------------------------------------------------------------------
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 
 #---------------------------------------------------------------------------
 # rbenv
@@ -75,7 +75,7 @@ eval "$(direnv hook zsh)"
 # go
 #---------------------------------------------------------------------------
 export PATH=$HOME/go/bin:$PATH
-eval "$(jenv init -)"
+eval "$(pmy init -)"
 
 #---------------------------------------------------------------------------
 # Complement
