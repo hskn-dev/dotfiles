@@ -40,8 +40,7 @@ alias 'll'='ls -ltr'
 alias 'cls'='clear'
 alias 'tmuxg'='tmux new-session -d; \
         tmux setw synchronize-panes off; \
-        tmux splitw -v; tmux splitw -h -t 0; \
-        tmux splitw -h -t 2; \
+        tmux splitw -v -t 1; \
         tmux select-pane -t 0; \
         tmux attach-session'
 #alias 'tmuxg'="tmux new-session -d; tmux pipe-pane -o '/bin/sh -c \"while read -r LINE; do echo \"[\$(date +\"%%Y_%%m%%d_%%H%%M%%S_%%N\")] \${LINE}\" >> \${HOME}/tmux-logs/\$(date +%Y%m%d-%H%M%S)-#S-#I.#P.log; done \"'"
