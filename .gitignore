@@ -31,3 +31,6 @@ yarn
 .config/iterm2
 .vscode
 .python-version
+
+# GitHUB CLI
+.config/gh/*
