@@ -33,4 +33,5 @@ yarn
 .python-version
 
 # GitHUB CLI
-.config/gh/*
+.config/gh/hosts.yml
+.config/gh/config.yml
