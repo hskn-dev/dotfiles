@@ -35,3 +35,6 @@ yarn
 # GitHUB CLI
 .config/gh/hosts.yml
 .config/gh/config.yml
+
+#GCP
+.config/gcloud

@@ -69,3 +69,9 @@ set -g theme_display_ruby no
 # set -g theme_newline_prompt '$ '
 
 fix_path
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /Users/kengo-hashimoto/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+

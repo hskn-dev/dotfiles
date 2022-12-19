@@ -64,17 +64,27 @@ eval "$(pyenv init --path)"
 #---------------------------------------------------------------------------
 #export PATH=$HOME/.jenv/bin:$PATH
 #eval "$(jenv init -)"
+#export CLASSPATH="/Users/kengo-hashimoto/java/bin/log4j-core-2.19.0.jar:/Users/kengo-hashimoto/java/bin/log4j-api-2.19.0.jar"
+export CLASSPATH="/Users/kengo-hashimoto/java/bin/log4j-core.jar:/Users/kengo-hashimoto/java/bin/log4j-api.jar"
+
+#---------------------------------------------------------------------------
+# goenv
+#---------------------------------------------------------------------------
+#export GOENV_ROOT="$HOME/.goenv"
+#export PATH="$GOENV_ROOT/bin:$PATH"
+#eval "$(goenv init -)"
+#
+#export GOROOT="$GOENV_ROOT"
+#export PATH="$GOROOT/shims/go:$PATH"
+#
+#export GOPATH="$GOENV_ROOT"
+#export PATH="$GOPATH/shims:$PATH"
 
 #---------------------------------------------------------------------------
 # vim
 #---------------------------------------------------------------------------
 export EDITOR=vim
 eval "$(direnv hook zsh)"
-
-#---------------------------------------------------------------------------
-# go
-#---------------------------------------------------------------------------
-export PATH=$HOME/go/bin:$PATH
 
 #---------------------------------------------------------------------------
 # Complement
@@ -392,3 +402,26 @@ export PKG_CONFIG_PATH="/usr/local/opt/python/lib/pkgconfig"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ### End of Zinit's installer chunk
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/kengo-hashimoto/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/kengo-hashimoto/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/kengo-hashimoto/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/kengo-hashimoto/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# gcloud
+source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+
+# Added by Amplify CLI binary installer
+export PATH="$HOME/.amplify/bin:$PATH"
+
