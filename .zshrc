@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 #---------------------------------------------------------------------------
 # General
 #---------------------------------------------------------------------------
@@ -166,6 +159,7 @@ setopt nolistbeep
 # autoload promptinit
 # promptinit
 # prompt pure
+# プロンプトは Starship を使用 (.zshrc 末尾で init + ~/.config/starship.toml で設定)。
 
 #---------------------------------------------------------------------------
 # History
@@ -409,8 +403,6 @@ INPUTS=~/inputs
 ## コメントアウトのトグル
 #zinit light tpope/vim-commentary
 #
-## プロンプトの変更
-#zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Visual モード
 # zinit light b4b4r07/zsh-vimode-visual
@@ -426,8 +418,8 @@ export PATH="/usr/local/opt/python/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/python/lib"
 export PKG_CONFIG_PATH="/usr/local/opt/python/lib/pkgconfig"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# プロンプト: Starship (homebrew: brew install starship)。設定は ~/.config/starship.toml。
+command -v starship >/dev/null && eval "$(starship init zsh)"
 ### End of Zinit's installer chunk
 
 # >>> conda initialize >>>
