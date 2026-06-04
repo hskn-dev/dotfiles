@@ -1,40 +1,43 @@
 .DS_Store
 
-# .config/*
-
-# !.config/fish
-# .config/fish/*
-# !.config/fish/config.fish
-# !.config/fish/functions
-# .config/fish/functions/*
-# !.config/fish/functions/fish_user_key_bindings.fish
-
-# !.config/nvim
-# .config/nvim/*
-# !.config/nvim/coc-setting.json
-# !.config/nvim/dein.lazy.toml
-# !.config/nvim/dein.toml
-# !.config/nvim/init.vim
-
+# ----------------------------------------
+# Runtime state / logs (machine-local; never track)
+# ----------------------------------------
+*-error.log
+*.log
 node_modules
 github.com
 tmux-powerline
-coc
+
+# nodemon / npm update-notifier / その他ツールのマシン状態
 configstore
+.config/configstore/
+
+# coc.nvim ランタイム状態 (db.json / history / mru / memos 等)
+coc
+.config/coc/
+
+# yarn のグローバル state / error log
 yarn
+.config/yarn/
 
-# irb/
-
-.config/tmux/tmux-powerline
+# ----------------------------------------
+# 移行済みで追跡しないツール (zsh+starship / Ghostty へ移行済)
+# ----------------------------------------
+.config/fish/
+.config/tmux/
+.config/iterm2/
 .config/filezilla
-.config/yarn
-.config/iterm2
+
+# ----------------------------------------
+# Editors / langs
+# ----------------------------------------
 .vscode
 .python-version
 
-# GitHUB CLI
+# GitHub CLI
 .config/gh/hosts.yml
 .config/gh/config.yml
 
-#GCP
+# GCP
 .config/gcloud
