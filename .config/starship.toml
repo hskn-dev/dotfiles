@@ -1,0 +1,144 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+# format について:
+#   Starship のデフォルトは format = "$all"。
+#   ここでは $all を明示展開し、$git_branch を ${custom.git_branch_wt}
+#   (worktree のとき wt: を前置する自作モジュール) に差し替えている。
+#   $custom は git_branch_wt の二重表示を避けるため除去済み。
+#   ※ $all を凍結しているので、将来 Starship が追加する新モジュールは
+#     自動表示されない。新モジュールを使いたくなったらここへ追記する。
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$nats\
+$directory\
+$vcsh\
+$fossil_branch\
+$fossil_metrics\
+${custom.git_branch_wt}\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$hg_state\
+$pijul_channel\
+$docker_context\
+$package\
+$bun\
+$c\
+$cmake\
+$cobol\
+$cpp\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$fortran\
+$gleam\
+$golang\
+$gradle\
+$haskell\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$lua\
+$maven\
+$mojo\
+$nim\
+$nodejs\
+$ocaml\
+$odin\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$quarto\
+$raku\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$solidity\
+$swift\
+$terraform\
+$typst\
+$vlang\
+$vagrant\
+$xmake\
+$zig\
+$buf\
+$guix_shell\
+$nix_shell\
+$conda\
+$pixi\
+$meson\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$direnv\
+$env_var\
+$mise\
+$crystal\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$container\
+$netns\
+$os\
+$shell\
+$character"""
+
+# gcloud アカウント表示を無効化 (要望: 消す)
+[gcloud]
+disabled = true
+
+# Docker コンテキスト (🐳 rancher-desktop 等) 表示を無効化 (要望: 消す)
+[docker_context]
+disabled = true
+
+# git status の色を黄緑に (要望)。format/記号はデフォルトのまま style だけ変更。
+[git_status]
+style = "bold #9acd32"
+
+# 標準 git_branch は無効化し、下の custom.git_branch_wt で置き換える
+[git_branch]
+disabled = true
+
+# git ブランチ表示。linked worktree のときだけブランチ名の前に wt: を付ける。
+#   判定: git-dir と git-common-dir の絶対パスが異なれば linked worktree。
+#   (通常リポジトリは両者一致、worktree は .git/worktrees/<name> を指すため不一致)
+[custom.git_branch_wt]
+description = "Git branch (linked worktree のとき wt: を前置)"
+when = "git rev-parse --is-inside-work-tree 2>/dev/null"
+command = '''
+branch=$(git symbolic-ref --short HEAD 2>/dev/null) || branch=$(git rev-parse --short HEAD 2>/dev/null)
+if [ "$(git rev-parse --path-format=absolute --git-dir 2>/dev/null)" != "$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null)" ]; then
+  printf 'wt:%s' "$branch"
+else
+  printf '%s' "$branch"
+fi
+'''
+format = "on [$symbol$output]($style) "
+symbol = " "
+style = "bold #ff8700"  # ブランチ名をオレンジに (要望)
