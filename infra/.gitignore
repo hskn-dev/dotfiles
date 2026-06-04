@@ -1,0 +1,8 @@
+# Terraform のローカル state / 作業ディレクトリはコミットしない。
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# .terraform.lock.hcl は provider バージョン固定のためコミットする（無視しない）。
