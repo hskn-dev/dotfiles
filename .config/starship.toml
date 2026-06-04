@@ -1,5 +1,11 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
+# command_timeout について:
+#   各モジュールが外部コマンド (例: $python が pyenv shim) を実行する際の
+#   タイムアウト (ms)。デフォルトの 500ms だと pyenv shim の初回起動が
+#   間に合わず "Executing command ... timed out" の WARN が出るため引き上げる。
+command_timeout = 1000
+
 # format について:
 #   Starship のデフォルトは format = "$all"。
 #   ここでは $all を明示展開し、$git_branch を ${custom.git_branch_wt}
