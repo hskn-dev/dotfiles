@@ -444,3 +444,20 @@ source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.
 # Added by Amplify CLI binary installer
 export PATH="$HOME/.amplify/bin:$PATH"
 
+#---------------------------------------------------------------------------
+# モダン CLI ツール (zoxide / atuin / eza)  ※ homebrew で導入
+#---------------------------------------------------------------------------
+# atuin: Ctrl-R 履歴検索の置き換え。fzf より後に init して Ctrl-R を atuin に渡す。
+#        上矢印も奪うのが嫌なら `atuin init zsh --disable-up-arrow`。
+command -v atuin >/dev/null && eval "$(atuin init zsh)"
+
+# zoxide: cd の賢い置き換え (z でジャンプ / zi で fzf 選択)。
+command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
+
+# eza: ls の置き換え (色 / アイコン / git 状態)。アイコンは ghostty 内蔵 Nerd Font で表示。
+if command -v eza >/dev/null; then
+  alias ls='eza --icons --group-directories-first'
+  alias ll='eza -l --icons --git --group-directories-first'
+  alias la='eza -la --icons --git --group-directories-first'
+  alias lt='eza --tree --level=2 --icons'
+fi
