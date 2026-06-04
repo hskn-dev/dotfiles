@@ -46,7 +46,12 @@ alias sw-ys-dev="source ~/oathtool/YSDevSwitchAdminRole.sh"
 alias sw-ys-prd="source ~/oathtool/YSPrdSwitchAdminRole.sh"
 alias sw-cbv="source ~/oathtool/CBVentureSwitchRole.sh"
 alias sw-sandbox="source ~/oathtool/SandboxSwitchSRERole.sh"
+alias sw-tenshoku-dev="source ~/oathtool/TenshokuDevSwitchAdminRole.sh"
+alias sw-tenshoku-prd="source ~/oathtool/TenshokuPrdSwitchAdminRole.sh"
+alias sw-rad-dev="source ~/oathtool/ResearchAndDevelopmentSwitchAdminRole.sh"
 alias ghh='cd ~/ghq/$(ghq list | fzf)'
+alias plm='pulumi'
+alias gitroot='cd "$(git rev-parse --show-toplevel)"'
 
 #---------------------------------------------------------------------------
 # pyenv
@@ -55,6 +60,11 @@ export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 #eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+
+#---------------------------------------------------------------------------
+# poetry
+#---------------------------------------------------------------------------
+export PATH=$HOME/.local/bin:$PATH
 
 #---------------------------------------------------------------------------
 # rbenv
@@ -73,13 +83,13 @@ export CLASSPATH="/Users/kengo-hashimoto/java/bin/log4j-core.jar:/Users/kengo-ha
 #---------------------------------------------------------------------------
 # goenv
 #---------------------------------------------------------------------------
-#export GOENV_ROOT="$HOME/.goenv"
-#export PATH="$GOENV_ROOT/bin:$PATH"
-#eval "$(goenv init -)"
-#
-#export GOROOT="$GOENV_ROOT"
-#export PATH="$GOROOT/shims/go:$PATH"
-#
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+
+export GOROOT="$GOENV_ROOT"
+export PATH="$GOROOT/shims/go:$PATH"
+
 #export GOPATH="$GOENV_ROOT"
 #export PATH="$GOPATH/shims:$PATH"
 
@@ -93,12 +103,13 @@ export CPPFLAGS="-I/opt/homebrew/opt/php@8.2/include"
 #---------------------------------------------------------------------------
 export EDITOR=vim
 export DIRENV_WARN_TIMEOUT=100s
-eval "$(direnv hook zsh)"
+#eval "$(direnv hook zsh)"
 
 #---------------------------------------------------------------------------
-# nodebrew
+# volta
 #---------------------------------------------------------------------------
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$HOME/.volta:$PATH"
 
 #---------------------------------------------------------------------------
 # serverless
@@ -438,11 +449,49 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # gcloud
-source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+#source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+#source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
 # Added by Amplify CLI binary installer
 export PATH="$HOME/.amplify/bin:$PATH"
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kengo-hashimoto/work/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kengo-hashimoto/work/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kengo-hashimoto/work/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kengo-hashimoto/work/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
+
+export PATH="/opt/homebrew/opt/unzip/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/kengo-hashimoto/.antigravity/antigravity/bin:$PATH"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/kengo-hashimoto/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# homebrew rsync
+export PATH="/opt/homebrew/bin:$PATH"
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# claude code
+# AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY は claude code の /login でセットアップ
+#export AWS_REGION="ap-northeast-1"
+#export CLAUDE_CODE_USE_BEDROCK=1
+#export ANTHROPIC_MODEL="global.anthropic.claude-opus-4-7"
+#export ANTHROPIC_DEFAULT_SONNET_MODEL="jp.anthropic.claude-sonnet-4-6"
+#export ANTHROPIC_DEFAULT_OPUS_MODEL="global.anthropic.claude-opus-4-7"
+#export ANTHROPIC_DEFAULT_HAIKU_MODEL="jp.anthropic.claude-haiku-4-5-20251001-v1:0"
 
 #---------------------------------------------------------------------------
 # モダン CLI ツール (zoxide / atuin / eza)  ※ homebrew で導入
