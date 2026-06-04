@@ -510,3 +510,30 @@ if command -v eza >/dev/null; then
   alias la='eza -la --icons --git --group-directories-first'
   alias lt='eza --tree --level=2 --icons'
 fi
+
+# Headroom 経由で Claude Code 起動 (port 38787)
+# 使い方:
+#   hc -a issue-manager            → --agent issue-manager -n issue-manager
+#   hc -a developer -n my-session  → -n を明示すればそちらを優先
+#   hc --resume                    → agent 無しで素通し
+hc() {
+  local agent="" name="" passthrough=()
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      -a|--agent) agent="$2"; shift 2 ;;
+      -n|--name)  name="$2";  shift 2 ;;
+      *) passthrough+=("$1"); shift ;;
+    esac
+  done
+
+  local args=()
+  [[ -n "$agent" ]] && args+=(--agent "$agent")
+  if [[ -n "$name" ]]; then
+    args+=(-n "$name")
+  elif [[ -n "$agent" ]]; then
+    args+=(-n "$agent")   # -n 省略時はエージェント名をセッション名に
+  fi
+  args+=("${passthrough[@]}")
+
+  headroom wrap claude -p 38787 -- "${args[@]}"
+}
