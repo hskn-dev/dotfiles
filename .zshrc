@@ -215,6 +215,10 @@ if command -v eza >/dev/null; then
 fi
 
 # Headroom 経由で Claude Code 起動 (port 38787)
+# HEADROOM_MODE=cache: 過去ターンを凍結しプレフィックスキャッシュ安定を優先
+#   (Anthropic は cache_read=0.1x と安いため、長い会話で履歴を圧縮し直して
+#    再キャッシュ(cache_write=1.25x)を招く token モードより総額が安くなる)
+#   token モードを試す時は HEADROOM_MODE=token hc ... で上書き可
 # 使い方:
 #   hc -a issue-manager            → --agent issue-manager -n issue-manager
 #   hc -a developer -n my-session  → -n を明示すればそちらを優先
@@ -238,5 +242,5 @@ hc() {
   fi
   args+=("${passthrough[@]}")
 
-  headroom wrap claude -p 38787 -- "${args[@]}"
+  HEADROOM_MODE="${HEADROOM_MODE:-cache}" headroom wrap claude -p 38787 -- "${args[@]}"
 }
